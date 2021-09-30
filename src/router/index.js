@@ -54,7 +54,22 @@ export const constantRoutes = [
       meta: { title: 'Dashboard', icon: 'dashboard' }
     }]
   },
-
+  {
+    path: '/selectInfo',
+    component: Layout,
+    redirect: '/selectInfo/listInfo',
+    alwaysShow: true,
+    name: '筛查信息管理',
+    meta: { title: '筛查信息管理', icon: 'example' },
+    children: [
+      {
+        path: 'listInfo',
+        name: '筛查列表',
+        component: () => import('@/views/selectInfo/listInfo'),
+        meta: { title: '筛查列表', icon: 'table' }
+      },
+    ]
+  },
   {
     path: '/example',
     component: Layout,

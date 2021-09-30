@@ -29,6 +29,7 @@ module.exports = {
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
+  lintOnSave:false, //关闭语法检查
   devServer: {
     port: port,
     open: true,
