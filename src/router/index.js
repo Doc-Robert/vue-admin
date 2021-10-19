@@ -68,6 +68,13 @@ export const constantRoutes = [
         component: () => import('@/views/selectInfo/listInfo'),
         meta: { title: '筛查列表', icon: 'table' }
       },
+      {
+        path: 'listInfo/details/:id',
+        name: '患者信息详情',
+        component: () => import('@/views/selectInfo/selectInfoDetails'),
+        meta: { title: '患者信息详情', noCache: true },
+        hidden: true
+      },
     ]
   },
   {

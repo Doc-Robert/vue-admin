@@ -16,5 +16,13 @@ export default {
       method: 'get',
       params:updateParams,
     })
-  }
+  },
+  //查询筛查者详细信息
+  getSelectInfoDetails(id){
+    return request({
+      url: `/item/result/${id}`,
+      method: 'get',
+      // params:page,
+    })
+  },
 }

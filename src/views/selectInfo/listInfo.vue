@@ -99,7 +99,9 @@
       </el-table-column>
       <el-table-column label="操作" align="center" width="500" class-name="small-padding fixed-width">
         <template slot-scope="scope">
-          <el-button type="info" size="mini" @click="Test(scope.row)">详情</el-button>
+          <!-- <router-link :to="'/selectInfo/listInfo/details/'+scope.row.id"> -->
+            <el-button type="info" size="mini" @click="selectInfoDetails(scope.row.id)">详情</el-button>
+          <!-- </router-link>   -->
           <el-button size="mini" type="success" @click="Test">
             输入筛查结果
           </el-button>
@@ -262,6 +264,10 @@ export default {
       handleFilterSearch(){
         console.log("搜索某东西");
       },
+      //页面详情 切换跳转
+      selectInfoDetails(id){
+        this.$router.push('/selectInfo/listInfo/details/'+id)
+      },
       Test(){
         console.log("click a button!");
       }
@@ -284,5 +290,8 @@ export default {
 }
 .export{
   width: 100%;
+}
+.el-button+.el-button {
+  margin-left: 10px;
 }
 </style>        
